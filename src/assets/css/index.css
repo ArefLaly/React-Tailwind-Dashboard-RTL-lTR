@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-brand-color {
+  background: linear-gradient(to right, #d49319, #a50a83);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+html,
+#main-wrapper {
+  scroll-behavior: smooth;
+}
+
+.rtl {
+  direction: rtl !important;
+}
+
+.ltr {
+  direction: ltr !important;
+}
+.main-sidebar {
+  @apply fixed overflow-x-hidden  left-0  top-0 z-[1000] flex h-screen flex-col    bg-white  shadow-blue-gray-300 dark:bg-boxdark lg:static lg:translate-x-0;
+}
+.sidebar-backdrop {
+  @apply fixed left-0 top-0 transition-all  backdrop-filter bg-black bg-opacity-25 z-[999];
+}
+.sidebar-logo {
+  @apply absolute -translate-x-1/2 -translate-y-1/2 w-fit left-1/2 top-1/2;
+}
+.side-nav-link {
+  @apply box-border relative flex items-center p-1 mx-2 mt-3 text-sm font-bold duration-300 bg-transparent rounded cursor-pointer gap-x-4 hover:font-bold hover:bg-opacity-10;
+}
+.side-nav-link-active {
+  background: linear-gradient(203deg, #5babd3, #35b1ef);
+  color: #fff;
+}
+.card-item-windows {
+  transition: all 0.4s ease-in;
+}
+.card-item-windows:hover {
+  transform: scaleY(1.09) !important;
+}
+.ltr-font,
+.ltr-font *,
+.font-sans {
+  /* font-family: Roboto, -serif; */
+  font-family: "Bahij Koodak" !important;
+}
+.swal-modal * {
+  font-family: "Bahij Koodak" !important;
+}
+
+.rtl-font,
+.rtl-font * {
+  font-family: "Bahij Koodak" !important;
+}
+body.dark .card,
+body.dark .card {
+  background-color: rgb(24, 26, 32);
+}
+
+.developer-profile {
+  position: relative;
+  overflow: hidden;
+}
+.developer-profile > div {
+  position: relative;
+  z-index: 1000;
+}
+
+.developer-profile::after {
+  position: absolute;
+  visibility: visible;
+  background-color: red;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg-box-1.png");
+  background-position: center;
+  z-index: 100;
+  bottom: -25px;
+  opacity: 0.35;
+}

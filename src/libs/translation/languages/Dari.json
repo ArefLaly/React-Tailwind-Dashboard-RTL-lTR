@@ -1,0 +1,32 @@
+{
+  "lang": "dari",
+  "dir": "rtl",
+  "font-class": "rtl-font",
+  "Mohammad Arif": "محمد عارف",
+  "Arif": "عارف",
+  "Laly": "لعلی",
+  "0093 784 970 037": "۰۰۹۳ ۷۸۴ ۹۷۰ ۰۳۷",
+  "Kabul, Afghanistan": "کابل - افغانستان",
+  "Fullstack Web Developer": "فول استک دولوپر ",
+
+  "Login": "ورود به سیستم",
+  "Email": "نام کاربری",
+  "Password": "رمز عبور",
+  "Remember-me": "مرا به خاصر بسپار",
+  "Forgot Password?": "رمز عبور خویش را فراموش کرده اید؟",
+  "Home": "صفحه اصلی",
+  "Profile": "پروفایل",
+  "UI Element": "عناصر گرافیگی",
+  "Forms": "فورم ها",
+
+  "Settings": "تنظیمات",
+  "Are you sure?": "آیا مطمین هستید؟",
+  "Logout": "خروج",
+  "Ok": "بلی",
+  "Cancel": "نخیر",
+  "Orders": "سفارشات",
+  "Tax Deduction": "کسر مالیات",
+  "Revenue": "درآمد",
+  "Yearly Sales": "فروشات سالانه",
+  "": ""
+}
