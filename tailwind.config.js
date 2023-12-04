@@ -12,9 +12,10 @@ module.exports = withMT({
       colors: {
         layout: "#f1f1f1",
         darklayout: "rgb(71, 77, 87)",
-        boxdark: "rgb(24, 26, 32);",
+        boxdark: "rgb(24, 26, 32)",
         strokedark: "rgb(71, 77, 87)",
         brandBlue: "#0285cb",
+        textdark: "#cfcfcf",
       },
       boxShadow: {
         sidebar:

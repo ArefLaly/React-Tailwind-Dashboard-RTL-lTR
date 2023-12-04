@@ -108,19 +108,19 @@ const Sidebar = () => {
       {/* <!-- ===== Start Sidebar ===== --> */}
       <motion.aside
         animate={{
-          transform: sidebarOpen ? "translateX(0)" : "translateX(-100)",
+          transform: sidebarOpen ? "translateX(0)" : "translateX(0)",
           width: sidebarOpen
             ? mobileSize
               ? "256px"
               : "256px"
             : mobileSize
-            ? "0"
+            ? "256px"
             : "64px",
         }}
         transition={{
           duration: 0.5,
         }}
-        className={`main-sidebar`}
+        className={`main-sidebar dark:text-white`}
       >
         {/* <div className="absolute top-0 flex justify-end w-full right md:hidden">
           <IconButton
@@ -142,7 +142,7 @@ const Sidebar = () => {
           </div>
           {/* <!-- ===== User Profile Image End ===== --> */}
           <Typography
-            className={`flex-2 whitespace-nowrap  ${!sidebarOpen && "hidden"}`}
+            className={`flex-2  whitespace-nowrap  ${!sidebarOpen && "hidden"}`}
             variant="h4"
           >
             {t("lang") !== "dari" && (

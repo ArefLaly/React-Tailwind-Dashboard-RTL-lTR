@@ -37,7 +37,7 @@ const SideNavLink = ({ title, url, icon, subLinks }: props) => {
   }  side-nav-link    text-gray dark:text-textdark !bg-opacity-30 dark:border-b-darkborder  hover:font-bold hover:text-brandBlue hover:bg-opacity-10  ${
     isActive && " !text-brandBlue !bg-brandBlue "
   } `;
-  console.log(subLinks);
+
   // const handleOpen = () => {
   //   setOpen(!open);
   // };
@@ -71,16 +71,17 @@ const SideNavLink = ({ title, url, icon, subLinks }: props) => {
             animate={{
               height: open && sidebarOpen ? "auto" : 0,
             }}
-            className="pl-8 overflow-hidden text-gray-800 rtl:pr-8 rtl:pl-1 card-body "
+            className="pl-8 overflow-hidden rtl:pr-8 rtl:pl-1 card-body "
           >
             <div className={`flex flex-col gap-3 p-2 rounded-sm ‍`}>
               {subLinks.map((subItem) => (
                 <Link
+                  key={"sub-nav-" + url + subItem.url}
                   onClick={() => mobileSize && setSidebarOpen(false)}
                   to={url + subItem.url}
-                  className={`px-2 ${
+                  className={`px-2 dark:text-white ${
                     url + subItem.url === location.pathname &&
-                    " !text-brandBlue"
+                    " !text-brandBlue "
                   }`}
                 >
                   <div className="flex gap-x-3">

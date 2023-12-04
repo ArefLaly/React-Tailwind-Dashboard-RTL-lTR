@@ -20,7 +20,7 @@ const Header = () => {
   const navigate = useNavigate();
   useEffect(() => {}, [user]);
   return (
-    <header className="sticky top-0 duration-500 z-[10000] flex  bg-white bg-opacity-100 drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none w-full">
+    <header className="sticky dark:text-white top-0 duration-500 z-[10000] flex  bg-white bg-opacity-100 drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none w-full">
       <div className="flex items-center justify-between flex-grow px-0 py-3 shadow-2 md:px-2 ">
         <div className="flex items-center">
           {/* <!-- Hamburger Toggle BTN --> */}

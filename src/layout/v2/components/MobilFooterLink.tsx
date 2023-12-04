@@ -24,7 +24,7 @@ const MobileFooterLink = ({ name, url, icon }: props) => {
     <NavLink
       onClick={handleClick}
       to={url}
-      className={`w-full  relative focus:text-brandBlue hover:text-brandBlue justify-center text-center pt-2 pb-1 flex flex-col mt-2`}
+      className={`w-full  dark:text-white relative focus:text-brandBlue hover:text-brandBlue justify-center text-center pt-2 pb-1 flex flex-col mt-2`}
     >
       <div className="flex flex-col items-center justify-center gap-1 ">
         {React.createElement(icon, {
@@ -33,9 +33,10 @@ const MobileFooterLink = ({ name, url, icon }: props) => {
         })}
         <span
           className={`text-sm duration-300 opacity-0 d ${
-            isActiveLink && "opacity-100"
+            isActiveLink && "opacity-100 text-brandBlue"
           }`}
         >
+          {" "}
           {name}
         </span>
       </div>

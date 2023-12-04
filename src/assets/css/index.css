@@ -71,6 +71,9 @@ body[dir="rtl"] .scrollbar-track-y {
   left: 0;
   right: unset;
 }
+body.dark {
+  background-color: rgb(24, 26, 32);
+}
 
 .developer-profile {
   position: relative;

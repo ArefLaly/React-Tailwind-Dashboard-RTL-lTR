@@ -21,7 +21,7 @@ const Layout = ({ children }: props) => {
     <main
       className={` ${
         user ? "bg-layout dark:bg-darklayout" : "bg-white dark:bg-boxdark"
-      }   dark:text-white text-[#3C4858]`}
+      }    dark:text-white`}
     >
       <div className="p-2   min-h-[calc(89vh)] mx-auto   md:p-3 ">
         {children}
@@ -42,6 +42,9 @@ const Layout = ({ children }: props) => {
           className={`relative flex flex-col flex-1  z-[500] overflow-x-hidden overflow-y-auto transition-all duration-500 ${
             sidebarOpen && mobileSize ? "shadow-2xl " : ""
           }`}
+          initial={{
+            transform: "scale(0) translateX(0) ",
+          }}
           animate={{
             transform:
               sidebarOpen && mobileSize
