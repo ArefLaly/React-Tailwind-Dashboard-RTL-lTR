@@ -1,7 +1,6 @@
 import {
   ArrowPathIcon,
   Bars3Icon,
-  ChatBubbleBottomCenterIcon,
   ChevronLeftIcon,
 } from "@heroicons/react/24/outline";
 import { IconButton } from "@material-tailwind/react";
@@ -13,7 +12,7 @@ import { useContext, useEffect } from "react";
 import { LayoutContext } from "../../../context/layout/Layout.context";
 import useUser from "../../../hooks/useUser";
 import ProfileMenu from "../../../features/authentication/components/ProfileMenu";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { sidebarOpen, setSidebarOpen } = useContext(LayoutContext);
@@ -59,14 +58,14 @@ const Header = () => {
               <ArrowPathIcon className="w-5 h-5" />
             </IconButton>
             <FullScreenSwitcher />
-            {user && (
+            {/* {user && (
               <Link to="/inbox" className="relative">
                 <IconButton variant="text" className="relative mr-2 text-gray">
                   <ChatBubbleBottomCenterIcon className="w-5 h-5" />
                   <div className="absolute bottom-0 w-3 h-3 translate-y-1 bg-red-400 rounded-full -right-2 animate-pulse"></div>
                 </IconButton>
               </Link>
-            )}
+            )} */}
             <LangSwitcher />
             {/* <!-- Dark Mode Toggler --> */}
             <DarkModeSwitcher />

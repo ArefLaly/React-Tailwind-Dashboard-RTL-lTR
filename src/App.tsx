@@ -4,11 +4,11 @@ import "react-toastify/dist/ReactToastify.css";
 import "react-nice-scroll/dist/styles.css";
 import { store } from "./context/store/store";
 import AppRoutes from "./routes/AppRoutes";
-import Layout from "./layout/v1/Layout";
 
 import { ToastContainer } from "react-toastify";
 import { useTranslation } from "react-i18next";
 import LayoutProvider from "./context/layout/Layout.proivder";
+import Layout from "./layout/v2/Layout";
 const App = () => {
   const { t } = useTranslation();
   return (

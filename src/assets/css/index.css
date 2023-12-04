@@ -11,7 +11,10 @@ html,
 #main-wrapper {
   scroll-behavior: smooth;
 }
-
+body {
+  background-color: #fff !;
+  color: #464545;
+}
 .rtl {
   direction: rtl !important;
 }
@@ -20,16 +23,16 @@ html,
   direction: ltr !important;
 }
 .main-sidebar {
-  @apply fixed overflow-x-hidden  left-0  top-0 z-[1000] flex h-screen flex-col    bg-white  shadow-blue-gray-300 dark:bg-boxdark lg:static lg:translate-x-0;
+  @apply fixed overflow-x-hidden  left-0 rtl:right-0 rtl:left-auto  top-0 z-[200] flex h-screen flex-col    bg-white  shadow-blue-gray-300 dark:bg-boxdark lg:static lg:translate-x-0;
 }
 .sidebar-backdrop {
-  @apply fixed left-0 top-0 transition-all  backdrop-filter bg-black bg-opacity-25 z-[999];
+  @apply fixed left-0 top-0 transition-all  backdrop-filter bg-white z-[100];
 }
 .sidebar-logo {
   @apply absolute -translate-x-1/2 -translate-y-1/2 w-fit left-1/2 top-1/2;
 }
 .side-nav-link {
-  @apply box-border relative flex items-center p-1 mx-2 mt-3 text-sm font-bold duration-300 bg-transparent rounded cursor-pointer gap-x-4 hover:font-bold hover:bg-opacity-10;
+  @apply box-border relative flex items-center m-2 mx-2 text-sm font-bold text-gray-800 duration-300 bg-transparent rounded cursor-pointer gap-x-2 hover:font-bold hover:bg-opacity-10;
 }
 .side-nav-link-active {
   background: linear-gradient(203deg, #5babd3, #35b1ef);
@@ -55,9 +58,18 @@ html,
 .rtl-font * {
   font-family: "Bahij Koodak" !important;
 }
+
 body.dark .card,
 body.dark .card {
   background-color: rgb(24, 26, 32);
+}
+body.dark hr {
+  background-color: blue !important;
+  border-color: blue !important;
+}
+body[dir="rtl"] .scrollbar-track-y {
+  left: 0;
+  right: unset;
 }
 
 .developer-profile {
@@ -81,4 +93,44 @@ body.dark .card {
   z-index: 100;
   bottom: -25px;
   opacity: 0.35;
+}
+.nn {
+  box-shadow: -15px 18px #fff;
+}
+.mobile-fotter-bar {
+  background-size: cover;
+  background-position: center center;
+}
+.mobile-fotter-bar-bottom {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.drop {
+  z-index: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #0285cb;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: drop-water 0.7s ease-in-out;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+@keyframes drop-water {
+  0% {
+    top: -20px;
+    opacity: 1;
+  }
+  90% {
+    top: 15px;
+    opacity: 1;
+    width: 10px;
+  }
+  100% {
+    top: 15px;
+    opacity: 0;
+    width: 0;
+  }
 }

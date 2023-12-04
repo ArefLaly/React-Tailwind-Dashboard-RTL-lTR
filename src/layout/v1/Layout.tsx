@@ -8,12 +8,13 @@ import { useTranslation } from "react-i18next";
 import useUser from "../../hooks/useUser";
 import { LayoutContext } from "../../context/layout/Layout.context";
 import { ScrollContainer } from "react-nice-scroll";
+import { motion } from "framer-motion";
 type props = {
   children: JSX.Element;
 };
 
 const Layout = ({ children }: props) => {
-  const { mobileSize } = useContext(LayoutContext);
+  const { mobileSize, sidebarOpen } = useContext(LayoutContext);
   const { t } = useTranslation();
   const mainContent = (
     <main>
@@ -40,8 +41,17 @@ const Layout = ({ children }: props) => {
         {/* <!-- ===== Sidebar End ===== --> */}
 
         {/* <!-- ===== Content Area Start ===== --> */}
-        <div
-          className="relative flex flex-col flex-1 overflow-x-hidden overflow-y-auto"
+        <motion.div
+          className={`relative flex flex-col flex-1  z-[5000] overflow-x-hidden overflow-y-auto transition-all duration-500 ${
+            sidebarOpen && mobileSize ? "shadow-2xl " : ""
+          }`}
+          animate={{
+            transform:
+              sidebarOpen && mobileSize ? "scale(0.75) translateX(65%) " : "",
+          }}
+          transition={{
+            duration: 0.5,
+          }}
           id="main-wrapper"
         >
           {/* <!-- ===== Header Start ===== --> */}
@@ -55,7 +65,7 @@ const Layout = ({ children }: props) => {
             mainContent
           )}
           {/* <!-- ===== Main Content End ===== --> */}
-        </div>
+        </motion.div>
         {/* <!-- ===== Content Area End ===== --> */}
         {/* <!-- =====  Mobile Footer End ===== --> */}
         {user && <MobileFooter />}

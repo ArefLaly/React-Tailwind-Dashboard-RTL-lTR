@@ -1,9 +1,5 @@
 import { useContext, useEffect } from "react";
-import {
-  HomeIcon,
-  Square3Stack3DIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { HomeIcon, Square3Stack3DIcon } from "@heroicons/react/24/outline";
 import {
   UserCircleIcon,
   PowerIcon,
@@ -77,7 +73,7 @@ const Sidebar = () => {
         onClick={() => setSidebarOpen(true)}
         className={` ${mobileSize && !sidebarOpen && "hidden "}  ${
           mobileSize && "w-screen h-screen"
-        }  sidebar-backdrop`}
+        }  sidebar-backdrop dark:bg-boxdark`}
       />
       {/* <!-- ===== End Sidebarbackdrop ===== --> */}
       {/* <!-- ===== Start Sidebar ===== --> */}
@@ -97,7 +93,7 @@ const Sidebar = () => {
         }}
         className={`main-sidebar`}
       >
-        <div className="absolute top-0 flex justify-end w-full right md:hidden">
+        {/* <div className="absolute top-0 flex justify-end w-full right md:hidden">
           <IconButton
             variant="text"
             onClick={() => setSidebarOpen(false)}
@@ -105,7 +101,7 @@ const Sidebar = () => {
           >
             <XMarkIcon className="w-6 h-5" />
           </IconButton>
-        </div>
+        </div> */}
         <div className="flex items-center content-center mx-auto mt-1 gap-x-1 ">
           {/* <!-- ===== User Profile Image Start ===== --> */}
           <div

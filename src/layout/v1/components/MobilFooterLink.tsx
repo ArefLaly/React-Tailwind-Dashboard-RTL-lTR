@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+
 // import { HeroIcon } from "@heroicons/react";
 import { NavLink, useLocation } from "react-router-dom";
 import { LayoutContext } from "../../../context/layout/Layout.context";
@@ -29,7 +30,7 @@ const MobileFooterLink = ({ name, url, icon }: props) => {
     >
       <div
         className={`absolute bg-white   left-1/2  dark:bg-boxdark  p-4 -translate-x-1/2  border-[5px]  ${
-          isActiveLink && " text-red-300 -translate-y-1/3  "
+          isActiveLink && " text-red-300 -translate-y-1/3 "
         }  h-[54px] border-transparent duration-300 bg-white   w-[54px] rounded-full`}
       >
         {React.createElement(icon, {

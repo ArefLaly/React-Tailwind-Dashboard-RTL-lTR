@@ -44,7 +44,7 @@ const MobileFooter = () => {
     <section
       className={`origin-bottom dark:bg-boxdark  footer-shadow  ${
         !sidebarOpen && mobileSize ? "translate-y-0" : "translate-y-24"
-      }    duration-300 fixed inset-x-0  z-[1000] bottom-0 bg-white shadow`}
+      }    duration-300 fixed inset-x-0  z-[9000] bottom-0 bg-white shadow`}
     >
       <div className="flex justify-between min-h-[65px]">
         {links.map((link) => (
