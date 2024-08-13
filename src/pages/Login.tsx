@@ -40,7 +40,7 @@ const Login = () => {
       .then((data) => {
         data.image && localStorage.setItem("user-image", data.image);
         data.token && setUser(data.token);
-        toast.success(t("Welcome To Rana Student Portal!"));
+        toast.success(t("Welcome Back!"));
       })
       .catch((error) => {
         setError(error?.response?.data?.message || error.message);
